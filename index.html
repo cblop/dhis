@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+layout: true
+
+---
+
+<!-- more pics would be nice -->
+
+# Every Object Tells a Story
+Matt Thompson, EngD at University of Bath & Sysemia Ltd
+
+<!-- punch and judy image -->
+<!-- ![Default-aligned-image](img/punchJudy.png) -->
+
+---
+layout: false
+
+# About the project
+
+Collaboration between:
+
+- University of Bath
+- Sysemia Ltd, Bristol
+- Bishop's Palace, Wells
+
+TSB-funded feasibility study
+
+---
+
+# What is it?
+
+- Person walks around the exhibition space with a tablet device
+- Bluetooth LE beacons (iBeacons) are used to get their location
+- They are given options and recommendations based on where they go and what they do
+- BUT: in a narrative-y way
+
+---
+class: center,middle
+
+<!-- screenshot goes here -->
+![Default-aligned-image](img/estimote.png)
+
+---
+class: center
+
+<!-- screenshot goes here -->
+![Default-aligned-image](img/beacons.jpg)
+
+---
+
+
+# Bluetooth LE beacons
+
+<!-- pic would be nice -->
+
+- Work like radio beacons (but using Bluetooth LE)
+- Just send out a signal
+- Distance from beacon is based on signal strength
+
+---
+
+# Design
+
+- Resembles a 'Choose Your Own Adventure' book
+- Story is told in the second person
+- Three types of action: _visit_, _examine_ and _ask_.
+- Actions are stored as a list of events
+
+---
+
+# Recommendations
+
+- Introduced in the context of the narrative
+- Example:
+  > _"You remember someone in the local pub telling you about this painting of Bishop Jocelyn. She suggested also looking at the chair he used, which is in the Bishop's house."_
+
+
+---
+class: center
+
+<!-- screenshot goes here -->
+![Default-aligned-image](img/screen1.png)
+
+---
+class: center
+
+<!-- screenshot goes here -->
+![Default-aligned-image](img/screen2.png)
+
+---
+class: center
+
+<!-- screenshot goes here -->
+![Default-aligned-image](img/screen3.png)
+
+---
+
+# How are facts stored?
+
+- RDF semantics (subject-predicate-object triples)
+- Stored in JSON-LD format
+- schema.org ontology for simplicity
+
+---
+
+# Event Calculus solver
+
+<!-- get ref for this -->
+
+- The Event Calculus describes how events happen over time using mathematical logic
+- This allows us to reason about what may or may not be true at a certain point in time
+
+---
+
+# The Event Calculus
+
+- _Fluents_ are properties that are true or false.
+- Events _occur_, which _initiate_ or _terminate_ fluents at instants in time
+- A fluent _holds_ (is true) at a point in time if it has been initiated, but not terminated.
+
+---
+
+# Implementation details
+
+- Runs on Nexus 7 tablet
+- HTML based, Cordova app
+- Coded in Clojurescript
+- Clojurescript's core.logic for Event Calculus
+
+---
+class: center, middle, inverse
+
+# End
+
+
+
+    </textarea>
+      <script src="js/remark-0.6.0.min.js" type="text/javascript">
+    </script>
+      <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+      <script src="js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark'
+        }) ;
+    </script>
+  </body>
+</html>
